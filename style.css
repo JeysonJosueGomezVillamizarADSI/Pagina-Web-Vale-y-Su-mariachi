@@ -46,15 +46,22 @@ header {
     background: #bc4e9c;
     background: linear-gradient(to right, hsla(205, 79%, 9%, 0.664), hsla(205, 79%, 9%, 0.664)), url(../img/portada.png);
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
+    background-attachment: scroll;
     position: relative;
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        background-attachment: fixed;
+    }
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px 0 0;
+    padding: 20px 30px 0 20px;
     flex-wrap: wrap;
 }
 
@@ -87,6 +94,7 @@ header {
     font-weight: 300;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 15px;
 }
 
 .nav-links a:hover {
@@ -96,28 +104,30 @@ header {
 
 header .textos-header {
     display: flex;
-    min-height: 430px;
+    min-height: auto;
     width: 100%;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
 }
 
 .textos-header h1 {
-    font-size: 80px;
+    font-size: 70px;
     font-family: "Lobster Two", sans-serif;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .textos-header h2 {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 200;
     color: #fff;
     font-family: "Delius", cursive;
-    line-height: 1.8;
+    line-height: 1.6;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
@@ -542,8 +552,12 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+    header {
+        min-height: 500px;
+    }
+
     .navbar {
-        padding: 20px 30px 0 0;
+        padding: 15px 20px 0 20px;
     }
 
     .menu-toggle {
@@ -553,9 +567,9 @@ footer {
 
     .nav-links {
         position: absolute;
-        top: 80px;
+        top: 70px;
         right: 0;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.95);
         width: 100%;
         flex-direction: column;
         gap: 0;
@@ -575,17 +589,18 @@ footer {
     }
 
     header .textos-header {
-        min-height: 350px;
-        padding: 30px 15px;
+        min-height: auto;
+        padding: 40px 15px;
     }
 
     .textos-header h1 {
-        font-size: 50px;
-        margin-bottom: 20px;
+        font-size: 45px;
+        margin-bottom: 15px;
     }
 
     .textos-header h2 {
-        font-size: 18px;
+        font-size: 17px;
+        line-height: 1.5;
     }
 
     .titulo {
@@ -646,26 +661,31 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    header {
+        min-height: 400px;
+    }
+
     .navbar {
-        padding: 15px 20px 0 0;
+        padding: 10px 15px 0 15px;
     }
 
     .textos-header h1 {
-        font-size: 36px;
+        font-size: 32px;
+        margin-bottom: 10px;
     }
 
     .textos-header h2 {
-        font-size: 16px;
-        line-height: 1.5;
+        font-size: 14px;
+        line-height: 1.4;
     }
 
     .titulo {
-        font-size: 24px;
-        margin-bottom: 30px;
+        font-size: 22px;
+        margin-bottom: 25px;
     }
 
     .contenedor {
-        padding: 30px 10px;
+        padding: 25px 10px;
         width: 100%;
     }
 
@@ -691,7 +711,7 @@ footer {
     }
 
     .quote-section h2 {
-        font-size: 16px;
+        font-size: 15px;
     }
 
     #contacto {
@@ -727,6 +747,6 @@ footer {
         height: 45px;
         bottom: 20px;
         right: 15px;
-        font-size: 20px;
+        font-size: 18px;
     }
 }
